@@ -175,7 +175,12 @@ function MDFCalculator() {
       setResult(null);
     }
   };
-
+  useEffect(() => {
+    if (selectedDesign && DESIGNS.length > 0) {
+      calc();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedDesign]);
 
 
   const PreviewSVG = ({ layout }) => {
