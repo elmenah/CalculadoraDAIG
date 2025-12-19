@@ -3,5 +3,8 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/CalculadoraDAIG/', // 🔴 nombre EXACTO del repo
+  base: '/CalculadoraDAIG/',
+  build: {
+    outDir: 'docs'
+  }
 })
